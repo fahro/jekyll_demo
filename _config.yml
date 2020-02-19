@@ -27,7 +27,7 @@ twitter_username: fahro
 github_username:  fahro
 
 # Build settings
-theme: jekyll-athena
+theme: minima
 plugins:
   - jekyll-feed
 
