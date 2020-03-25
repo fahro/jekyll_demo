@@ -1,0 +1,166 @@
+
+///////////////////////////////////////////////////////////
+// COMMON
+///////////////////////////////////////////////////////////
+
+body {
+    font-family: $base-font;
+    -webkit-font-smoothing: antialiased;
+    font-size: $base-font-size;
+    font-weight: $base-font-weight;
+    color: $occrp-text-normal;
+    background-color: $occrp-bg-body;
+}
+
+a {
+    color: $occrp-red;
+    cursor: pointer;
+    &:hover {
+        color: darken($occrp-red, 20%);
+    }
+
+    &.invalid {
+        background-color: red;
+        color: white;
+        &:before {
+            content: "INVALID REFERENCE --- ";
+        }
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+.occrp-page {
+    background-color: $occrp-bg-page;
+    padding-bottom: $base-font-size * 7;
+}
+
+h3.occrp-section {
+    margin-top: 0;
+    font-size: $base-font-size * 1.2;
+    color: $occrp-red;
+    font-weight: 800;
+    text-transform: uppercase;
+
+    a {
+        color: $occrp-red;
+
+        &:hover {
+            color: $occrp-text-normal;
+            text-decoration: none;
+        }
+    }
+}
+
+@mixin occrp-container-inner {
+    width: 100%;
+    max-width: $occrp-width-max;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.occrp-container-wide {
+    @media (max-width: $occrp-width-max) {
+        padding-left: $page-side-padding-left;
+        padding-right: $page-side-padding-right;
+    }
+}
+
+.occrp-container {
+    @extend .occrp-container-wide;
+    @include occrp-container-inner;
+}
+
+.occrp-container-inner {
+    @include occrp-container-inner;
+}
+
+h2.occrp-section {
+    margin-top: $base-font-size * 7;
+    text-align: center;
+    font-size: $base-font-size * 2.5;
+    color: $occrp-text-normal;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+
+    a {
+        color: $occrp-text-normal;
+
+        &:hover {
+            color: $occrp-red;
+            text-decoration: none;
+        }
+    }
+}
+
+hr {
+    margin-top: $base-font-size * 3;
+    border-top: 1px solid $occrp-bg-medium;
+}
+
+.more-info a,
+.more-info span {
+    color: $occrp-red;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+a.next-link {
+    display: inline-block;
+    font-size: 1.1em;
+    color: $occrp-text-normal;
+    background-color: $occrp-bg-medium;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: $base-font-size * 2;
+    padding-top: $base-font-size * 1;
+    padding-bottom: $base-font-size * 1;
+    padding-left: $base-font-size * 3;
+    padding-right: $base-font-size * 3;
+    border-radius: 4px;
+
+    &:hover {
+        text-decoration: none;
+        background-color: darken($occrp-bg-medium, 10%);
+    }
+}
+
+
+.call-to-action,
+.tag-filters-container {
+    text-align: center;
+    order: 1;
+    width: 100%;
+
+    a, label {
+        @include teaser-text;
+        display: inline-block;
+        text-transform: uppercase;
+        font-weight: 900;
+        border-radius: 4px;
+
+        @media (max-width: $occrp-width-mobile) {
+            width: 100%;
+        }
+
+        background-color: $occrp-red;
+        color: white;
+        // margin-top: $base-font-size;
+        margin-bottom: $base-font-size;
+        padding: $base-font-size;
+        padding-left: $base-font-size * 2;
+        padding-right: $base-font-size * 2;
+
+        &:hover {
+            background-color: darken($occrp-red, 10%);
+            text-decoration: none;
+        }
+    }
+    
+    a.disabled, label.disabled {
+        opacity:0.3;
+    }
+}

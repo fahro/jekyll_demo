@@ -1,0 +1,87 @@
+///////////////////////////////////////////////////////////
+// CORE MIXINS
+///////////////////////////////////////////////////////////
+
+@mixin drop-shadow {
+    box-shadow: rgba(0, 0, 0, 0.14) 0px 2px 2px 0px, rgba(0, 0, 0, 0.2) 0px 3px 1px -2px, rgba(0, 0, 0, 0.12) 0px 1px 5px 0px;
+}
+
+@mixin padded-box {
+    padding-top: $base-font-size * 3;
+    padding-bottom: $base-font-size * 3;
+    padding-left: $base-font-size * 2;
+    padding-right: $base-font-size * 2;
+}
+
+@mixin teaser-text {
+    font-family: $base-font;
+    -webkit-font-smoothing: antialiased;
+    font-size: $base-font-size * 1.2;
+    font-weight: 600;
+}
+
+@mixin image-credit {
+    .image-credit {
+        display:block;
+        font-style:italic;
+        margin-top:0.2em;
+    }
+}
+
+@mixin display-flex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+@mixin flex-item($args) {
+    -ms-flex: $args;
+    -webkit-flex: $args;
+    flex: $args;
+}
+
+@mixin teaser-nav {
+    ul {
+        list-style-type: none;
+        padding-left: 0;
+
+        li {
+            padding-top: $base-font-size * 0.8;
+
+            .summary {
+                display: block;
+                font-size: $base-font-size * 1;
+                color: $occrp-text-dark;
+            }
+        }
+
+        a {
+            color: $occrp-text-normal;
+
+            &:hover, &.active {
+                color: $occrp-red;
+                text-decoration: none;
+            }
+
+            i {
+                min-width: 2em;
+            }
+        }
+
+    }
+}
+
+@mixin story-font {
+    font-family: 'Noto Serif', Georgia, serif;
+    font-size: $base-font-size * 1.5;
+    font-weight: 300;
+    line-height: 1.6em;
+}
+
+@mixin tall-box {
+    // used by stage and story-box
+    //@media (min-width: $occrp-width-single) {
+        min-height: 8 * 4 * $base-font-size;
+    //}
+}

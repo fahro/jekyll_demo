@@ -1,0 +1,23 @@
+///////////////////////////////////////////////////////////
+// MAIN TITLE
+///////////////////////////////////////////////////////////
+
+.occrp-main-title {
+    @extend .occrp-container;
+    text-align: center;
+    margin-top: $base-font-size * 4;
+    margin-bottom: $base-font-size * 4;
+
+    h1 {
+        font-weight: 700;
+        font-size: $base-font-size * 2.7;
+        line-height: 1.6em;
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+    }
+    .subtitle {
+        font-style: italic;
+        font-size: $base-font-size * 1.5;
+        color:$occrp-red;
+    }
+}
