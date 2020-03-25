@@ -2,13 +2,13 @@
     <h2>{{ include.header }}</h2>
     <p>{{ include.description }}</p>
 
-    <p class="read-more" data-toggle="collapse" data-target="#{{include.target}}" aria-expaned="false" aria-controls="multiCollapseExample1">
+    <p class="read-more" data-toggle="collapse" data-target="#{{include.id}}" aria-expaned="false" aria-controls="multiCollapseExample1">
         Read More
         <span><i style="font-size:20px" class="fa fa-caret-down"></i></span>
     </p>
 
     <div class="col">
-        <div class="collapse" id="{{include.target}}">
+        <div class="collapse" id="{{include.id}}">
             <div class="card card-body">
                 {{include.text}}
             </div>
