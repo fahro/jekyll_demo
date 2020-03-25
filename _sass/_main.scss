@@ -1,9 +1,8 @@
-
 .box-container {
     // border-radius: 17px 17px 17px 17px;
     // -moz-border-radius: 17px 17px 17px 17px;
     // -webkit-border-radius: 17px 17px 17px 17px;
-    // border: 2px solid #969696;
+    // border: 1px dotted #969696;
     padding: 20px
 }
 
@@ -13,31 +12,34 @@ h3 {
     font-weight: bold;
     font-size: 1.3rem;
 
-    margin-top: 3rem;
+    margin-top: 2em;
 }
 
 
 
 h2 {
     color: #982022;
-    font-family: "source sans pro";
-    font-weight: bold;
-    font-size: 1.4rem;
+
 
 }
 
 h1 {
     font-family: "source sans pro";
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 3em;
 }
 
 p {
-    font-size: 1rem;
+    font-size: 1.5em;
 }
 
 .read-more {
     color: #666666;
     font-size: 0.9rem;
     cursor: pointer;
+}
+
+.container {
+    margin: 3em auto;
+
 }
