@@ -1,0 +1,5 @@
+<div class="box-containter">
+    {% for tool in include.tools %}
+        {% include toolbox.html header=tool.header target-id=tool.target-id description=tool.description text=tool.text %}
+    {% endfor %}
+</div>
