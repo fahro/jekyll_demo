@@ -11,11 +11,14 @@ title: Example
             centres, others are available to reporters and the general public.
         </p>
     </div>
+    <hr>
     <div class="row">
         {% for component in site.data.components.homepage %}
         <div class="col">
             {% for box in component.column %}
             {% include toolbox-list.html tools=box %}
+            <hr>
+
             {% endfor %}
         </div>
         {% endfor %}
