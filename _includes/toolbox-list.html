@@ -1,5 +1,12 @@
+<h3>{{include.tools.box-heading}}</h3>
+
 <div class="box-containter">
-    {% for tool in include.tools %}
-        {% include toolbox.html header=tool.header target-id=tool.target-id description=tool.description text=tool.text %}
+    {% for tool in include.tools.members %}
+        {% include toolbox.html 
+            header=tool.header
+            target-id=tool.target-id
+            description=tool.description
+            path=tool.path 
+        %}
     {% endfor %}
 </div>

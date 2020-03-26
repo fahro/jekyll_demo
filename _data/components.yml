@@ -1,0 +1,67 @@
+homepage:
+  - column:
+    - box-heading: Available to the Public
+      members:
+        - header: Aleph
+          target-id: aleph
+          description: Search a global archive to identify links across stories and datasets
+          path: /components/left-column/aleph.html
+
+        - header: VIS
+          target-id: vis
+          description: Build maps of complex business or crime networks
+          path: /components/left-column/vis.html
+          
+    - box-heading: Available to Partners and Collaborators
+      members:
+        - header: Editorial
+          target-id: editorial
+          description: Ask OCCRP editors about pitching stories, co-publishing and facilitating cross-border investigations 
+          path: /components/left-column/editorial.html
+
+        - header: ID
+          target-id: id
+          description: Ask for help from professional researchers to trace people, companies, and assets across the world
+          path: /components/left-column/id.html
+  
+        - header: Wiki
+          target-id: wiki
+          description: Collaborate on investigations by sharing findings across teams and partners 
+          path: /components/left-column/wiki.html
+        
+        - header: Data Desk  
+          target-id: data-desk
+          description: Get help with all your data acquisition and  analysis questions
+          path: /components/left-column/data-desk.html
+  - column:
+    - box-heading: Available to OCCRP Member Centers Only
+      members:
+        - header: Organizational Development 
+          target-id: organizational-development
+          description: Advice and help on fundraising, sustainability, and building the foundation for a non-profit media organization  
+          path: /components/right-column/organizational-development.html
+          
+        - header: Legal  
+          target-id: legal
+          description: Emergency pro bono legal support
+          path: /components/right-column/legal.html     
+
+        - header: Network Contacts  
+          target-id: network-contacts
+          description: Find your peers across the network
+          path: /components/right-column/network-contacts.html    
+
+        - header: Website Hosting  
+          target-id: website-hosting
+          description: Secure hosting for websites and email
+          path: /components/right-column/website-hosting.html
+                    
+        - header: Info and Physical Security   
+          target-id: info-security
+          description: Training and advice on best practices,  which tools to use, and how to stay safe
+          path: /components/right-column/info-security.html
+                    
+        - header: IT Help Desk 
+          target-id: helpdesk
+          description: Troubleshooting, account management, support with in-house tools
+          path: /components/right-column/helpdesk.html
