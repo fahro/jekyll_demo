@@ -1,54 +1,43 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-#
-# If you need help with YAML syntax, here are some quick references for you: 
-# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
-# https://learnxinyminutes.com/docs/yaml/
-#
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
+url: https://toolkit.occrp.org/
+title: OCCRP toolkit
+metatitle: "journalist's toolkit"
+author: Organized Crime and Corruption Reporting Project
+description: >
+  The investigative toolkit brings together technologies and services that
+  support journalists doing cross-border research. Toolkit includes a
+  staffed research desk, data search engine, and collaboration tools.
+logo: /static/svg/logo.svg
+google_analytics: ""
+repository_url: https://git.occrp.org/websites/toolkit.occrp.org
 
-title: An awesome static site
-email: myeamil@address.com
-description: >- # this means to ignore newlines until "baseurl:"
-  This is an example of a great static site built in Jekyll.
-url: "https://www.awesomestaticsites.com" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: fahro
-github_username:  fahro
+autoprefixer:
+  browsers:
+    - last 2 versions
 
-# Build settings
-theme: minima
+highlighter: pygments
+# paginate: 7
+
+sass:
+  style: compressed
+
 plugins:
-  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-autoprefixer
+  - jekyll-typogrify
+  - jekyll-redirect-from
 
-destination: public
 
-# Exclude from processing.
-# The following items will not be processed, by default.
-# Any item listed under the `exclude:` key here will be automatically added to
-# the internal "default list".
-#
-# Excluded items can be processed by explicitly listing the directories or
-# their entries' file path in the `include:` list.
-#
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - Dockerfile
+  - Makefile
+  - .editorconfig
+  - .dockerignore
+  - .gitignore
+  - .git
+  - vendor
+  - .sass-cache
+  - _contrib
+  - .gitlab-ci.yml

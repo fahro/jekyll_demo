@@ -1,18 +1,19 @@
 <div>
-    <h2>{{ include.header }}</h2>
-    <p>{{ include.description }}</p>
+    <h3>{{ include.header }}</h2>
+        <p>{{ include.description }}</p>
 
-    <p class="read-more" data-toggle="collapse" data-target="#{{include.target-id}}" aria-expaned="false" aria-controls="multiCollapseExample1">
-        Read More
-        <span><i style="font-size:20px" class="fa fa-caret-down"></i></span>
-    </p>
+        <p class="read-more" data-toggle="collapse" data-target="#{{include.target-id}}" aria-expaned="false"
+            aria-controls="multiCollapseExample1">
+            Read More
+            <span><i style="font-size:20px" class="fa fa-caret-down"></i></span>
+        </p>
 
-    <div class="col">
-        <div class="collapse" id="{{include.target-id}}">
-            <div class="card card-body">
-                {% include {{ include.path }} %}
+        <div class="col">
+            <div class="collapse" id="{{include.target-id}}">
+                <div class="card card-body">
+                    {% include {{ include.path }} %}
+                </div>
             </div>
         </div>
-    </div>
 
 </div>

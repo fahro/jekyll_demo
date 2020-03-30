@@ -1,0 +1,31 @@
+version: "3.0"
+
+services:
+  my_jekyll:
+    image: jekyll/jekyll
+    volumes:
+      - "./:/srv/jekyll/"
+    command: ["jekyll", "build", "--watch"]
+
+  my_nginx:
+    build:
+      context: https://git.occrp.org/libre/watchful-nginx.git
+      args:
+        NGINX_PACKAGE:    "nginx-light"
+        NGINX_VERSION:    "1.10*"
+        INSTALL_PACKAGES: "libnginx-mod-http-fancyindex"
+    environment:
+      NO_DHPARAM: "true"
+    volumes:
+      # example data volume
+      - "./:/fancyroot/:ro"
+      # toolkit.occrp.org
+      - "./_site/:/assets/"
+      # config
+      - "./_contrib/nginx.conf:/etc/nginx/nginx.conf"
+    ports:
+      - "8080:80"
+    depends_on:
+      - my_jekyll
+
+    
